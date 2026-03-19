@@ -18,7 +18,6 @@ app.add_middleware(
 # 2. ตั้งค่าสมองกล Gemini (ใช้กุญแจที่คุณให้มา)
 # แนะนำ: ใน Render ให้ตั้งค่า Environment Variable ชื่อ GEMINI_API_KEY
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyCa0426Uu3cKVZ3j75On3k2QZCfL8UQlDI")
-genai.GenerativeModel('models/gemini-1.5-flash')
 
 # 3. กำหนดรูปแบบการรับข้อมูล (Input)
 class IdeaRequest(BaseModel):
@@ -29,7 +28,7 @@ class IdeaRequest(BaseModel):
 @app.post("/analyze")
 async def analyze_idea(request: IdeaRequest):
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
         
         # นี่คือ "ความรู้เฉพาะทาง" (Master Prompt) ของคุณ
         master_prompt = f"""
