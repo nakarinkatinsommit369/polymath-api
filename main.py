@@ -17,7 +17,7 @@ app.add_middleware(
 
 # 2. ตั้งค่าสมองกล Gemini (ใช้กุญแจที่คุณให้มา)
 # แนะนำ: ใน Render ให้ตั้งค่า Environment Variable ชื่อ GEMINI_API_KEY
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyCa0426Uu3cKVZ3j75On3k2QZCfL8UQlDI")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyA5E3H8kTt1Zy0KPrazbr9CycNckiL7e9Q")
 
 # 3. กำหนดรูปแบบการรับข้อมูล (Input)
 class IdeaRequest(BaseModel):
